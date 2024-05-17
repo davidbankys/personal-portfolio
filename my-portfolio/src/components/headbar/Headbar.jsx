@@ -1,7 +1,16 @@
 import "./headbar.scss";
-//import { Person, Mail } from "@material-ui/icons";
+import Button from '@mui/material/Button';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import PersonIcon from '@mui/icons-material/Person';
+import MailIcon from '@mui/icons-material/Mail';
+import IconButton from '@mui/material/IconButton';
+import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 
-function Headbar({ menuOpen, setMenuOpen }) {
+
+
+
+function Headbar({ menuOpen, setMenuOpen, darkMode, toggleDarkMode }) {
   return (
     <div className={"headbar " + (menuOpen && "active")}>
       <div className="wrapper">
@@ -10,15 +19,19 @@ function Headbar({ menuOpen, setMenuOpen }) {
             DB
           </a>
           <div className="itemContainer">
-            {/*  <Person className="icon" /> */}
-            <span>+705111111</span>
+             <PersonIcon className="icon" /> 
+            <span>+7052348965</span>
           </div>
           <div className="itemContainer">
-            {/*  <Mail className="icon" /> */}
+              <MailIcon className="icon" /> 
             <span>db@davidbankole.com</span>
+            <IconButton className="mode-toggle" onClick={toggleDarkMode}>
+            {darkMode ? <LightModeOutlinedIcon /> : <DarkModeIcon />}
+          </IconButton>
           </div>
         </div>
         <div className="right">
+        
           <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
             <span className="line1"></span>
             <span className="line2"></span>

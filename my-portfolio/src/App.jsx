@@ -10,13 +10,24 @@ import Skills from "./components/skills/Skills";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode((prevDarkMode) => !prevDarkMode);
+  };
+
   return (
-    <div className="app">
-      <Headbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+    <div className={`app ${darkMode ? "dark" : "light"}`}>
+      <Headbar
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+        darkMode={darkMode}
+        toggleDarkMode={toggleDarkMode}
+      />
       <Sidenav menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <div className="sections">
         <Intro />
-        <Portfolio />
+        <Portfolio  />
         <Skills />
       </div>
     </div>

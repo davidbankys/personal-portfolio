@@ -1,8 +1,10 @@
+const imagePath = '../assets/movie.png';
+
 export const featuredPortfolio = [
   {
     id: 1,
-    title: "Social Media App",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU",
+    title: "Embedded ",
+    img: "/src/assets/embed.png",
   },
 
   {
@@ -27,7 +29,7 @@ export const webPortfolio = [
   {
     id: 1,
     title: "Web Social Media App",
-    img: "https://cdn.dribbble.com/users/5031392/screenshots/15467520/media/c36b3b15b25b1e190d081abdbbf947cf.png?compress=1&resize=1200x900",
+    img: "https://www.simpasamson.com",
   },
   {
     id: 2,
@@ -73,22 +75,22 @@ export const designPortfolio = [
   {
     id: 1,
     title: "Design Social Media App",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU",
+    img: "/src/assets/Lambdap.png",
   },
   {
     id: 2,
-    title: "Design Rampa UI Design",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU",
+    title: "Movie Design",
+    img: "src/assets/movie.png",
   },
   {
     id: 3,
     title: "Design E-commerce Web Design",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU",
+    img: "/src/assets/Places.png",
   },
   {
     id: 4,
     title: "Design Relax Mobile App",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU",
+    img: "/src/assets/des.jpg",
   },
 ];
 

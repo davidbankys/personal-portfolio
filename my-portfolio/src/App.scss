@@ -1,23 +1,40 @@
-.app{
+:root {
+    --background-color-light: rgb(255, 255, 255); 
+    --text-color-light: black; 
+  
+    --background-color-dark: #333; 
+    --text-color-dark: rgb(0, 20, 150); 
+  }
+  
+  .app {
     height: 100vh;
-
-    .sections{
-        width: 100%;
-        height: calc(100vh - 70px);
-        background-color: lightsalmon;
-        position: relative;
-        top: 70px;
-        scroll-behavior: smooth;
-        scroll-snap-type: y mandatory;
-        scrollbar-width: none; //for firefox
-        &::-webkit-scrollbar{
-            display: none;
-        }
-
-        > *{
-            width: 100vw;
-            height: calc(100vh - 70px);
-            scroll-snap-align: start;
-        }
+    background-color: var(--background-color-light); 
+    color: var(--text-color-light); 
+  
+    &.dark {
+      background-color: var(--background-color-dark); 
+      color: var(--text-color-dark);
     }
-}
+  
+    // Day mode styles
+    .sections {
+      width: 100%;
+      height: calc(100vh - 70px);
+      position: relative;
+      top: 70px;
+      scroll-behavior: smooth;
+      scroll-snap-type: y mandatory;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+  
+      > * {
+        width: 100vw;
+        height: calc(100vh - 70px);
+        scroll-snap-align: start;
+      }
+    }
+  
+  
+  }

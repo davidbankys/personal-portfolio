@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss";
 import {
@@ -10,6 +10,7 @@ import {
 } from "../../data";
 
 export default function Portfolio() {
+  const textRef = useRef();
   const [selected, setSelected] = useState("featured");
   const [data, setData] = useState([]);
   const list = [
@@ -22,11 +23,11 @@ export default function Portfolio() {
       title: "Web App",
     },
     {
-      id: "mobile",
-      title: "Mobile App",
+      id: "Embedded",
+      title: "Embedded",
     },
     {
-      id: "design",
+      id: "Design",
       title: "Design",
     },
   ];

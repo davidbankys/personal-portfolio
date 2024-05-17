@@ -1,7 +1,7 @@
 import "./intro.scss";
 import { init } from "ityped";
 import { useEffect, useRef } from "react";
-import daveImage from '../../assets/david.png';
+import daveImage from '../../assets/Humaaan.png';
 
 
 export default function Intro() {
@@ -12,7 +12,7 @@ export default function Intro() {
       showCursor: true,
       backDelay: 1500,
       backSpeed: 30,
-      strings: ["Software Programmer", "Mobile Game Designer", "Embedded Engineer"],
+      strings: ["Software Programmer...", "Mobile Game Designer...", "Embedded Engineer..."],
     });
   }, []);
 
@@ -25,7 +25,7 @@ export default function Intro() {
       </div>
       <div className="right">
         <div className="wrapper">
-          <h2>Hey, I'm <span>David</span></h2>
+          <h2>Hey, I'm <span>David,</span></h2>
           <p>My dream is to build solutions for global problem...</p>
           <h3>
             <span ref={textRef}></span>
