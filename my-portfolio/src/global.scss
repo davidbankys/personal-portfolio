@@ -1,6 +1,22 @@
 $mainColor: #220077;
-
 $width: 768px;
+
+:root {
+  --background-color-light: rgb(255, 255, 255);
+  --text-color-light: black;
+  --background-color-dark: #0e0e0e;
+  --text-color-dark: rgb(255, 255, 255);
+}
+
+body {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+
+  &.dark {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+  }
+}
 
 @mixin mobile {
   @media (max-width: #{$width}) {

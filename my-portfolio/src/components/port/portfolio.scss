@@ -1,14 +1,16 @@
 @import "../../global.scss";
 
 .portfolio {
-  //background-color: red;
+  //background-color: inherit;
+  //color: inherit;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   h1 {
-    font-size: 30px;
-
+    font-size: 40px;
+    color: #ffffff;
+    
     @include mobile {
       font-size: 20px;
     }
@@ -29,7 +31,6 @@
 
   .container {
     width: 70%;
-   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,7 +49,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
+      color: inherit; 
+      background-color: inherit; 
       position: relative;
       transition: all 0.5s ease;
       cursor: pointer;

@@ -1,40 +1,52 @@
 :root {
-    --background-color-light: rgb(255, 255, 255); 
-    --text-color-light: black; 
-  
-    --background-color-dark: #333; 
-    --text-color-dark: rgb(0, 20, 150); 
+  --background-color-light: rgb(218, 200, 200);
+  --text-color-light: #220077;
+
+  --background-color-dark: #212121;
+  --text-color-dark: rgb(255, 255, 255);
+}
+
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+
+  &.dark {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
   }
-  
-  .app {
-    height: 100vh;
-    background-color: var(--background-color-light); 
-    color: var(--text-color-light); 
-  
-    &.dark {
-      background-color: var(--background-color-dark); 
-      color: var(--text-color-dark);
+}
+
+.app {
+  height: 100%;
+  background-color: inherit;
+  color: inherit;
+
+  &.dark {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+  }
+
+  .sections {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 70px;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
     }
-  
-    // Day mode styles
-    .sections {
+
+    > * {
       width: 100%;
-      height: calc(100vh - 70px);
-      position: relative;
-      top: 70px;
-      scroll-behavior: smooth;
-      scroll-snap-type: y mandatory;
-      scrollbar-width: none;
-      &::-webkit-scrollbar {
-        display: none;
-      }
-  
-      > * {
-        width: 100vw;
-        height: calc(100vh - 70px);
-        scroll-snap-align: start;
-      }
+      height: 100%;
+      scroll-snap-align: start;
+      background-color: inherit;
+      color: inherit;
     }
-  
-  
   }
+}

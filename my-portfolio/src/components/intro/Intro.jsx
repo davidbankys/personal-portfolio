@@ -1,21 +1,9 @@
 import "./intro.scss";
-import { init } from "ityped";
 import { useEffect, useRef } from "react";
+import Typewriter from "typewriter-effect";
 import daveImage from '../../assets/Humaaan.png';
 
-
-export default function Intro() {
-  const textRef = useRef();
-
-  useEffect(() => {
-    init(textRef.current, {
-      showCursor: true,
-      backDelay: 1500,
-      backSpeed: 30,
-      strings: ["Software Programmer...", "Mobile Game Designer...", "Embedded Engineer..."],
-    });
-  }, []);
-
+function Intro() {
   return (
     <div className="intro" id="intro">
       <div className="left">
@@ -25,11 +13,17 @@ export default function Intro() {
       </div>
       <div className="right">
         <div className="wrapper">
-          <h2>Hey, I'm <span>David,</span></h2>
-          <p>My dream is to build solutions for global problem...</p>
+          <p>Hi There, I'm David </p>
           <h3>
-            <span ref={textRef}></span>
+            <Typewriter
+              options={{
+                strings: ["Software Developer", "Designer", "Embedded System Engineer"],
+                autoStart: true,
+                loop: true,
+              }}
+            />
           </h3>
+          <p>Building solutions to global problems...</p>
         </div>
         <a href="#portfolio">
           <img src="assets/down.png" alt="" />
@@ -38,3 +32,5 @@ export default function Intro() {
     </div>
   );
 }
+
+export default Intro;

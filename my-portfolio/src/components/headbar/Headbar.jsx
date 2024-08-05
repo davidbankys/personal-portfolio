@@ -6,13 +6,14 @@ import PersonIcon from '@mui/icons-material/Person';
 import MailIcon from '@mui/icons-material/Mail';
 import IconButton from '@mui/material/IconButton';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
+import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 
 
 
 
 function Headbar({ menuOpen, setMenuOpen, darkMode, toggleDarkMode }) {
   return (
-    <div className={"headbar " + (menuOpen && "active")}>
+    <div className={"headbar " + (menuOpen && "active") + (darkMode ? " dark" : "")}>
       <div className="wrapper">
         <div className="left">
           <a href="#intro" className="logo">
@@ -26,7 +27,7 @@ function Headbar({ menuOpen, setMenuOpen, darkMode, toggleDarkMode }) {
               <MailIcon className="icon" /> 
             <span>db@davidbankole.com</span>
             <IconButton className="mode-toggle" onClick={toggleDarkMode}>
-            {darkMode ? <LightModeOutlinedIcon /> : <DarkModeIcon />}
+            {darkMode ? <LightModeOutlinedIcon /> : <DarkModeOutlinedIcon />}
           </IconButton>
           </div>
         </div>
