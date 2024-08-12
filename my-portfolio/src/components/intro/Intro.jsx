@@ -1,7 +1,8 @@
 import "./intro.scss";
 import { useEffect, useRef } from "react";
 import Typewriter from "typewriter-effect";
-import daveImage from '../../assets/Humaaan.png';
+import daveImage from '../../assets/Standing.png';
+import resume from '../../assets/David_Abel_Resume.pdf';
 
 function Intro() {
   return (
@@ -12,7 +13,7 @@ function Intro() {
         </div>
       </div>
       <div className="right">
-        <div className="wrapper">
+        <div className="right-wrapper">
           <p>Hi There, I'm David </p>
           <h3>
             <Typewriter
@@ -24,10 +25,10 @@ function Intro() {
             />
           </h3>
           <p>Building solutions to global problems...</p>
+          <a href={resume} download="David_Abel_Resume.pdf">
+          <button>Download Resume</button>
+          </a>
         </div>
-        <a href="#portfolio">
-          <img src="assets/down.png" alt="" />
-        </a>
       </div>
     </div>
   );

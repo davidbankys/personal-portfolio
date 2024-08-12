@@ -1,96 +1,89 @@
+@import "../../global.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 .contact {
+  padding: 40px;
+  background-color: #f9f9f9;
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+
+  h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .contact-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 40px;
-    background-color: #f9f9f9;
-    
+    align-items: flex-start;
+    gap: 20px;
+
     .left {
       flex: 1;
-      padding-right: 20px; 
-  
-      .contact-info {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 40px;
-  
-        .info-item {
-          display: flex;
-          align-items: center;
-          background-color: #fff;
-          padding: 15px;
-          border-radius: 8px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          margin-bottom: 15px;
-  
-          .icon {
-            font-size: 24px;
-            color: #64C7CC;
-            margin-right: 15px;
-          }
-        }
-      }
-  
+      display: flex;
+      justify-content: center; // Center the form horizontally within the left container
+      padding-right: 40px;
+
       .contact-form {
+        width: 50%; // Make the form take up 50% of the left container
         display: flex;
         flex-direction: column;
-  
+        align-items: center; // Center the form elements horizontally
+
         h2 {
           font-size: 30px;
           margin-bottom: 20px;
-          text-align: center;
+          text-align: center; // Center the heading text
         }
-  
+
         label {
           font-size: 16px;
           margin-bottom: 5px;
+          align-self: flex-start; // Align labels to the start
         }
-  
+
         input,
         textarea {
           width: 100%;
           padding: 10px;
           margin-bottom: 20px;
-          border: 1px solid #ddd;
+          border: 1px solid #dedede;
           border-radius: 4px;
           font-size: 16px;
         }
-  
+
         button {
-          background-color: #64C7CC;
-          color: #fff;
+          background-color: #410c97;
+          color: #ffffff;
           padding: 10px 20px;
           border: none;
           border-radius: 4px;
           font-size: 16px;
           cursor: pointer;
           transition: background-color 0.3s;
-  
+
           &:hover {
-            background-color: #4a9fa9;
+            background-color: #393aa9;
           }
         }
       }
     }
-  
+
     .right {
       flex: 1;
-      padding-left: 20px; 
-  
+      padding-left: 20px;
+
       .imgContainer {
-        position: relative; 
-        overflow: hidden;
-  
+        display: flex;
+        justify-content: center; 
+
         img {
-          width: 100%;
-          border-radius: 12px; 
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
-          transition: transform 0.3s ease-in-out;
-  
-          &:hover {
-            transform: scale(1.05); 
-          }
+          width: 60%;
+          //border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          object-fit: cover;
         }
       }
     }
   }
+}

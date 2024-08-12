@@ -1,17 +1,17 @@
 import React from 'react';
 import './contact.scss';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
-import contactImage from '../../assets/contact-image.jpg';
+import contactImage from '../../assets/Humaaan.png';
 
 
 function Contact() {
   return (
     <div className="contact" id="contact">
-     
+      <h1>Contact</h1>
+     <div className='contact-container'>
       <div className="left">
-    
         <form className="contact-form">
-          <h2>Send Us a Message</h2>
+          <h2>Send a message!</h2>
           <label htmlFor="name">Name</label>
           <input type="text" id="name" name="name" required />
 
@@ -28,6 +28,7 @@ function Contact() {
         <div className="imgContainer">
         <img src={contactImage} alt="dave" />
         </div>
+      </div>
       </div>
     </div>
   );
