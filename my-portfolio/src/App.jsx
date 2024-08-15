@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.scss";
 import Headbar from "./components/headbar/Headbar";
 import Intro from "./components/intro/Intro";
@@ -11,9 +11,18 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(true);
 
+  // Apply dark mode class to <html> on initial load
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
+
   const toggleDarkMode = () => {
     setDarkMode((prevDarkMode) => !prevDarkMode);
-    document.documentElement.classList.toggle("dark", !darkMode);
+    document.documentElement.classList.toggle("dark");
   };
 
   return (

@@ -18,28 +18,40 @@
     align-items: flex-start;
     gap: 20px;
 
+    @include mobile {
+      flex-direction: column-reverse; 
+    }
+
     .left {
       flex: 1;
       display: flex;
-      justify-content: center; // Center the form horizontally within the left container
+      justify-content: center;
       padding-right: 40px;
 
+      @include mobile {
+        padding-right: 0;
+        padding-top: 20px;
+
+        
+      }
+
       .contact-form {
-        width: 50%; // Make the form take up 50% of the left container
+        width: 50%;
         display: flex;
         flex-direction: column;
-        align-items: center; // Center the form elements horizontally
+        align-items: center;
+        
 
         h2 {
           font-size: 30px;
           margin-bottom: 20px;
-          text-align: center; // Center the heading text
+          text-align: center;
         }
 
         label {
           font-size: 16px;
           margin-bottom: 5px;
-          align-self: flex-start; // Align labels to the start
+          align-self: flex-start;
         }
 
         input,
@@ -73,13 +85,16 @@
       flex: 1;
       padding-left: 20px;
 
+      @include mobile {
+        padding-left: 0;
+      }
+
       .imgContainer {
         display: flex;
-        justify-content: center; 
+        justify-content: center;
 
         img {
           width: 60%;
-          //border-radius: 8px;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
           object-fit: cover;
         }
