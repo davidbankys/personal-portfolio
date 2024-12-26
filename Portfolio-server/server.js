@@ -16,7 +16,6 @@ app.use(bodyParser.json());
 app.get('/', (req, res) => {
     res.send('Server is up and running!');
   });
-  
 
 // Nodemailer transporter setup
 const transporter = nodemailer.createTransport({
